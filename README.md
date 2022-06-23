@@ -21,4 +21,16 @@ a hand gesture recognition using mediapipe hand pose estimation
 
 
 ### Training
+- The collected landmarks points in `keypoint.csv` are preprocessed in `keyclassifier.ipynb` using the sci-kit learn library.
+- Using keras, a training module is built. An input layer of 42 nodes, with 2 hidden layers. 
+- The output layer has a number nodes equal to `num_classes =4` which is equivalent to the number of training classes.
+
+### Testing 
+- After a model has been built, the model and weights are saved into `models/savedkeypoints.h5`
+- The model is converted into a tflite.
+- Inference testing is then performed.
+
+## Reference
+- [MediaPipe](https://google.github.io/mediapipe/)
+- [Kazihuto00](https://github.com/Kazuhito00/hand-gesture-recognition-using-mediapipe)
 
